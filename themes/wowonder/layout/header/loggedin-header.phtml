@@ -32,7 +32,7 @@ if ($followers_alert == 0) {
 	<li class="dropdown requests-container" onclick="Wo_OpenRequestsMenu();">
 		<span class="new-update-alert<?php echo $followers_hidden_class;?>">
 			<?php echo $followers_alert?>
-		</span><!-- TODO Modified by ME Log 3 Start --> <?php if ($wo['config']['user_status'] == 1 && $wo['loggedin'] ==true) { ?>
+		</span><!-- TODO. Modified by ME Log 3 Start --> <?php if ($wo['config']['user_status'] == 1 && $wo['loggedin'] ==true) { ?>
 		<a href="#" class="dropdown-toggle <?php echo $unread_update_followers;?> sixteen-font-size" data-toggle="dropdown" role="button" aria-expanded="false">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M14 14.252v2.09A6 6 0 0 0 6 22l-2-.001a8 8 0 0 1 10-7.748zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm6 6v-3h2v3h3v2h-3v3h-2v-3h-3v-2h3z" fill="currentColor"/></svg>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="hide_fill_svg"><path d="M14 14.252V22H4a8 8 0 0 1 10-7.748zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm6 4v-3h2v3h3v2h-3v3h-2v-3h-3v-2h3z" fill="currentColor"/></svg>
@@ -79,22 +79,22 @@ if ($followers_alert == 0) {
 				<h5 class="text-center"><svg width='50px' height='50px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><circle cx="50" cy="50" r="40" stroke="#676d76" fill="none" stroke-width="6" stroke-linecap="round"><animate attributeName="stroke-dashoffset" dur="1.5s" repeatCount="indefinite" from="0" to="502"></animate><animate attributeName="stroke-dasharray" dur="1.5s" repeatCount="indefinite" values="150.6 100.4;1 250;150.6 100.4"></animate></circle></svg></h5>
 			</li>
 		</ul>
-	</li><?php } ?> <!-- TODO Modified by ME Log 3 END -->
+	</li><?php } ?> <!-- TODO. Modified by ME Log 3 END -->
 	<li class="dropdown">
 		<a href="#" class="dropdown-toggle user-menu-combination" data-toggle="dropdown" role="button" aria-expanded="false">
-			<?php if ($wo['config']['user_status'] == 1 && $wo['loggedin'] == true) { ?><div class="user-avatar"><!---TODO  Modified By ME -->
-				<img id="updateImage-<?php echo $wo['user']['user_id']?>" src="<?php echo $wo['user']['avatar'];?>" alt="<?php echo $wo['user']['name'];?> Profile Picture"> <!---TODO Modified By ME -->
-			</div> <?php } else { ?><!--- TODO Modified By ME -->
-                <i class="fa fa-user"></i> <?php echo $wo['lang']['guest']; ?>  <!---  TODO Modified By ME -->
-            <?php } ?> <!--- TODO Modified By ME -->
+			<?php if ($wo['config']['user_status'] == 1 && $wo['loggedin'] == true) { ?><div class="user-avatar"><!---TODO.  Modified By ME -->
+				<img id="updateImage-<?php echo $wo['user']['user_id']?>" src="<?php echo $wo['user']['avatar'];?>" alt="<?php echo $wo['user']['name'];?> Profile Picture"> <!---TODO. Modified By ME -->
+			</div> <?php } else { ?><!--- TODO. Modified By ME -->
+                <i class="fa fa-user"></i> <?php echo $wo['lang']['guest']; ?>  <!---  TODO. Modified By ME -->
+            <?php } ?> <!--- TODO. Modified By ME -->
 		</a>
 		<ul class="dropdown-menu ani-acc-menu" role="menu">
-            <?php if ($wo['config']['user_status'] == 1 && $wo['loggedin'] == true) { ?><!---TODO Modified By ME  Start Log 1 --><li>
+            <?php if ($wo['config']['user_status'] == 1 && $wo['loggedin'] == true) { ?><!---TODO. Modified By ME  Start Log 1 --><li>
 				<a id="update-username" href="<?php echo $wo['user']['url']; ?>" data-ajax="?link1=timeline&u=<?php echo $wo['user']['username'];?>" class="wow_hdr_menu_usr_lnk">
 					<b><?php echo $wo['user']['name'];?></b>
 					<img src="<?php echo $wo['user']['avatar'];?>" alt="<?php echo $wo['user']['name'];?> Profile Picture">
 				</a>
-			</li> <!---TODO Modified By ME  END Log 1 -->
+			</li> <!---TODO. Modified By ME  END Log 1 -->
 			<?php if ($wo['config']['point_level_system'] == 1) { ?>
 				<li class="dropdown-hidden-link">
 					<a href="<?php echo Wo_SeoLink('index.php?link1=setting&page=my_points'); ?>" data-ajax="?link1=setting&page=my_points">
@@ -284,7 +284,7 @@ if ($followers_alert == 0) {
 				</li>
 			<?php } ?> <?php } ?>
 			<li><hr></li>
-            <?php if ($wo['config']['user_status'] == 1 && $wo['loggedin'] == true) { ?><!---TODO Modified By ME  Start Log 2 -->
+            <?php if ($wo['config']['user_status'] == 1 && $wo['loggedin'] == true) { ?><!---TODO. Modified By ME  Start Log 2 -->
 			<li>
 				<a href="<?php echo Wo_SeoLink('index.php?link1=logout'); ?>"><?php echo $wo['lang']['log_out']; ?></a>
 			</li>
@@ -293,7 +293,7 @@ if ($followers_alert == 0) {
                 <a href="<?php echo Wo_SeoLink('index.php?link1=login&last_url=' . $wo['actual_link']);?>">
                     <?php echo $wo['lang']['login']; ?>
                 </a>
-            </li <?php } ?> <!---TODO Modified By ME  END Log 2 -->
+            </li <?php } ?> <!---TODO. Modified By ME  END Log 2 -->
 			<li><hr></li>
 			<li>
 				<a href="javascript:void(0);" data-toggle="modal" data-target="#keyboard_shortcuts_box" id="keyboard_shortcut">
