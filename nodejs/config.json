@@ -1,0 +1,8 @@
+{
+    "sql_db_host": "localhost",
+    "sql_db_user": "root",
+    "sql_db_pass": "mysql",
+    "sql_db_name": "local",
+    "site_url": "http://localhost/local",
+    "purchase_code": "f8953623-962f-4bd0-8b07-9b8e7ffac74b"
+}
