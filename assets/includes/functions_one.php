@@ -121,9 +121,9 @@ function Wo_GetPlatformFromUser_ID($user_id = 0) {
 }
 function Wo_SaveTerm($update_name, $value) {
     global $wo, $config, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $update_name = Wo_Secure($update_name);
     $value       = mysqli_real_escape_string($sqlConnect, $value);
     $query_one   = " UPDATE " . T_TERMS . " SET `text` = '{$value}' WHERE `type` = '{$update_name}'";
@@ -194,9 +194,9 @@ function Wo_LangsNamesFromDB($lang = 'english') {
 }
 function Wo_SaveConfig($update_name, $value) {
     global $wo, $config, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (!array_key_exists($update_name, $config)) {
         return false;
     }
@@ -383,9 +383,9 @@ function Wo_UserIDFromSMSCode($email_code) {
 }
 function Wo_IsBlocked($user_id) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id) || !is_numeric($user_id) || $user_id < 0) {
         return false;
     }
@@ -396,9 +396,9 @@ function Wo_IsBlocked($user_id) {
 }
 function Wo_RegisterBlock($user_id) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id) || !is_numeric($user_id) || $user_id < 0) {
         return false;
     }
@@ -409,9 +409,9 @@ function Wo_RegisterBlock($user_id) {
 }
 function Wo_RemoveBlock($user_id) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id) || !is_numeric($user_id) || $user_id < 0) {
         return false;
     }
@@ -422,9 +422,9 @@ function Wo_RemoveBlock($user_id) {
 }
 function Wo_GetBlockedMembers($user_id = 0) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id) || !is_numeric($user_id) || $user_id < 0) {
         return false;
     }
@@ -460,9 +460,9 @@ function Wo_PhoneExists($phone) {
 }
 function Wo_IsOnwerUser($user_id) {
     global $wo;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id) || !is_numeric($user_id) || $user_id < 0) {
         return false;
     }
@@ -477,9 +477,9 @@ function Wo_IsOnwerUser($user_id) {
 function Wo_IsOnwer($user_id) {
     global $wo;
 
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id) || !is_numeric($user_id) || $user_id < 0) {
         return false;
     }
@@ -622,9 +622,9 @@ function Wo_UserData($user_id, $password = true) {
 
 function Wo_UserStatus($user_id, $lastseen, $type = '') {
     global $wo;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if ($wo['user']['showlastseen'] == 0) {
         return false;
     }
@@ -662,9 +662,9 @@ function Wo_UserStatus($user_id, $lastseen, $type = '') {
 
 function Wo_LastSeen($user_id, $type = '') {
     global $wo, $sqlConnect, $cache;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id) || !is_numeric($user_id) || $user_id < 0) {
         return false;
     }
@@ -845,9 +845,9 @@ function Wo_isValidPasswordResetToken2($string) {
 }
 function Wo_DeleteUser($user_id) {
     global $wo, $sqlConnect, $cache,$db;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id) || !is_numeric($user_id) || $user_id < 1) {
         return false;
     }
@@ -1084,9 +1084,9 @@ function Wo_DeleteUser($user_id) {
 }
 function Wo_UpdateUserData($user_id, $update_data, $unverify = false) {
     global $wo, $sqlConnect, $cache;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id) || !is_numeric($user_id) || $user_id < 0) {
         return false;
     }
@@ -1161,9 +1161,9 @@ function Wo_UpdateUserData($user_id, $update_data, $unverify = false) {
 }
 function Wo_UpdateUsernameInNotifications($user_id = 0, $username = '') {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id) || !is_numeric($user_id) || $user_id < 0) {
         return false;
     }
@@ -1206,9 +1206,9 @@ function Wo_GetMedia($media) {
 }
 function Wo_UploadImage($file, $name, $type, $type_file, $user_id = 0, $placement = '') {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($file) || empty($name) || empty($type) || empty($user_id)) {
         return false;
     }
@@ -1549,9 +1549,9 @@ function Wo_GetUsersByTime($type = 'week') {
 function Wo_GetFollowingSug($limit, $query) {
     global $wo, $sqlConnect;
     $data = array();
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($query)) {
         return false;
     }
@@ -1624,9 +1624,9 @@ function Wo_WelcomeUsers($limit = '', $type = '') {
 }
 function Wo_FeaturedUsersAPI($limit = '', $offset = '') {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $pro_types = array();
     $type_text = "";
     foreach ($wo['pro_packages'] as $key => $value) {
@@ -1656,9 +1656,9 @@ function Wo_FeaturedUsersAPI($limit = '', $offset = '') {
 }
 function Wo_FeaturedUsers($limit = '', $type = '') {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $pro_types = array(1,2,3,4);
     $type_text = "";
     foreach ($wo['pro_packages'] as $key => $value) {
@@ -1853,9 +1853,9 @@ function Wo_ImportImageFromUrl($media, $custom_name = '_url_image') {
 
 function Wo_IsFollowingNotify($following_id, $user_id = 0) {
     global $sqlConnect, $wo;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($following_id) || !is_numeric($following_id) || $following_id < 0) {
         return false;
     }
@@ -1868,9 +1868,9 @@ function Wo_IsFollowingNotify($following_id, $user_id = 0) {
     return (Wo_Sql_Result($query, 0) == 1) ? true : false;
 }
 function Wo_IsFollowing($following_id, $user_id = 0) {
-    global $sqlConnect, $wo;  // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    global $sqlConnect, $wo;  // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($following_id) || !is_numeric($following_id) || $following_id < 0) {
         return false;
     }
@@ -1884,9 +1884,9 @@ function Wo_IsFollowing($following_id, $user_id = 0) {
 }
 function Wo_RegisterFollow($following_id = 0, $followers_id = 0) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (!isset($following_id) or empty($following_id) or !is_numeric($following_id) or $following_id < 1) {
         return false;
     }
@@ -1940,9 +1940,9 @@ function Wo_RegisterFollow($following_id = 0, $followers_id = 0) {
 }
 function Wo_CountFollowRequests($data = array()) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $get     = array();
     $user_id = Wo_Secure($wo['user']['user_id']);
     if (empty($data['account_id']) || $data['account_id'] == 0) {
@@ -1971,9 +1971,9 @@ function Wo_CountFollowRequests($data = array()) {
 }
 function Wo_IsFollowRequested($following_id = 0, $follower_id = 0) {
     global $sqlConnect, $wo;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (!isset($following_id) or empty($following_id) or !is_numeric($following_id) or $following_id < 1) {
         return false;
     }
@@ -1993,9 +1993,9 @@ function Wo_IsFollowRequested($following_id = 0, $follower_id = 0) {
 }
 function Wo_DeleteFollow($following_id = 0, $follower_id = 0) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (!isset($following_id) or empty($following_id) or !is_numeric($following_id) or $following_id < 1) {
         return false;
     }
@@ -2026,9 +2026,9 @@ function Wo_DeleteFollow($following_id = 0, $follower_id = 0) {
 function Wo_CountMutualFriends($user_id, $active = true) {
     global $wo, $sqlConnect;
     $data = array();
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME    return false;
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME    return false;
     // }
     if (empty($user_id) or !is_numeric($user_id) or $user_id < 1) {
         return false;
@@ -2078,9 +2078,9 @@ function Wo_CountFollowing($user_id,$active = true) {
 }
 function Wo_AcceptFollowRequest($following_id = 0, $follower_id = 0) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (!isset($following_id) or empty($following_id) or !is_numeric($following_id) or $following_id < 1) {
         return false;
     }
@@ -2127,9 +2127,9 @@ function Wo_AcceptFollowRequest($following_id = 0, $follower_id = 0) {
 }
 function Wo_DeleteFollowRequest($following_id, $follower_id) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (!isset($following_id) or empty($following_id) or !is_numeric($following_id) or $following_id < 1) {
         return false;
     }
@@ -2149,9 +2149,9 @@ function Wo_DeleteFollowRequest($following_id, $follower_id) {
 }
 function Wo_GetFollowRequests($user_id = 0, $search_query = '') {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $data = array();
     if (empty($user_id) or $user_id == 0) {
         $user_id = $wo['user']['user_id'];
@@ -2178,9 +2178,9 @@ function Wo_GetFollowRequests($user_id = 0, $search_query = '') {
 function GetGroupChatRequests()
 {
     global $wo, $sqlConnect,$db;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
 
     return $db->where('user_id',$wo['user']['id'])->where('active','0')->get(T_GROUP_CHAT_USERS);
 }
@@ -2282,9 +2282,9 @@ function Wo_GetFollowing($user_id, $type = '', $limit = '', $after_user_id = '',
 }
 function Wo_GetMutualFriends($user_id, $type = '', $limit = '', $after_user_id = '', $placement = array()) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $data = array();
     if (empty($user_id) or !is_numeric($user_id) or $user_id < 1) {
         return false;
@@ -2378,9 +2378,9 @@ function Wo_GetFollowers($user_id, $type = '', $limit = '', $after_user_id = '',
 }
 function Wo_GetFollowButton($user_id = 0) {
     global $wo;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (!is_numeric($user_id) or $user_id < 0) {
         return false;
     }
@@ -2431,9 +2431,9 @@ function Wo_GetFollowButton($user_id = 0) {
 }
 function Wo_GetNotifyButton($user_id = 0) {
     global $wo;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (!is_numeric($user_id) or $user_id < 0) {
         return false;
     }
@@ -2466,9 +2466,9 @@ function Wo_GetNotifyButton($user_id = 0) {
 }
 function Wo_GetFollowNotifyUsers($user_id = 0) {
     global $wo,$sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (!is_numeric($user_id) or $user_id < 0) {
         return false;
     }
@@ -2806,9 +2806,9 @@ function Wo_RegisterNotification($data = array()) {
 }
 function Wo_GetNotifications($data = array()) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $get = array();
     if (!isset($data['account_id']) or empty($data['account_id'])) {
         $data['account_id'] = $wo['user']['user_id'];
@@ -2903,9 +2903,9 @@ function Wo_GetNotifications($data = array()) {
 }
 function Wo_CountNotifications($data = array()) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $get = array();
     if (empty($data['account_id']) or $data['account_id'] == 0) {
         $data['account_id'] = Wo_Secure($wo['user']['user_id']);
@@ -2971,9 +2971,9 @@ function Wo_GetSearch($search_qeury) {
 }
 function Wo_GetRecentSerachs() {
     global $sqlConnect, $wo;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $user_id = Wo_Secure($wo['user']['user_id']);
     $data    = array();
     $query   = mysqli_query($sqlConnect, "SELECT `search_id`,`search_type` FROM " . T_RECENT_SEARCHES . " WHERE `user_id` = {$user_id} AND `search_id` NOT IN (SELECT `blocked` FROM " . T_BLOCKS . " WHERE `blocker` = '{$user_id}') AND `search_id` NOT IN (SELECT `blocker` FROM " . T_BLOCKS . " WHERE `blocked` = '{$user_id}') ORDER BY `id` DESC LIMIT 10");
@@ -3140,9 +3140,9 @@ function Wo_GetSearchFilter($result, $limit = 30, $offset = 0) {
 }
 function Wo_GetMessagesUsers($user_id, $searchQuery = '', $limit = 50, $new = false, $update = 0) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (!is_numeric($user_id) or $user_id < 1) {
         return false;
     }
@@ -3261,9 +3261,9 @@ function Wo_GetMessagesUsersAPP2($fetch_array = array()) {
 
 function Wo_GetPageChatList($user_id,$limit = 50, $new = false, $update = 0) {
     global $wo, $sqlConnect,$db;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (!is_numeric($user_id) or $user_id < 1) {
         return false;
     }
@@ -3321,9 +3321,9 @@ function Wo_GetPageChatList($user_id,$limit = 50, $new = false, $update = 0) {
 
 function Wo_GetMessages($data = array(), $limit = 50) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $message_data   = array();
     $user_id        = Wo_Secure($data['user_id']);
     $logged_user_id = Wo_Secure($wo['user']['user_id']);
@@ -3380,9 +3380,9 @@ function Wo_GetMessages($data = array(), $limit = 50) {
 }
 function Wo_GetGroupMessages($args = array()) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $options        = array(
         "id" => false,
         "offset" => 0,
@@ -3438,9 +3438,9 @@ function Wo_GetGroupMessages($args = array()) {
 }
 function Wo_GetPageMessages($args = array()) {
     global $wo, $sqlConnect,$db;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $options        = array(
         "id" => false,
         "offset" => 0,
@@ -3516,9 +3516,9 @@ function Wo_GetPageMessages($args = array()) {
 }
 function Wo_GetGroupMessagesAPP($args = array()) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $options        = array(
         "id" => false,
         "offset" => 0,
@@ -3631,9 +3631,9 @@ function Wo_GetMessagesHeader($data = array(),$type = '') {
 }
 function Wo_RegisterMessage($ms_data = array()) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($ms_data)) {
         return false;
     }
@@ -3707,9 +3707,9 @@ function Wo_RegisterMessage($ms_data = array()) {
 }
 function Wo_RegisterMessageGroup($ms_data = array()) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($ms_data)) {
         return false;
     }
@@ -3782,9 +3782,9 @@ function Wo_RegisterMessageGroup($ms_data = array()) {
 }
 function Wo_RegisterGroupMessage($ms_data = array()) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($ms_data)) {
         return false;
     }
@@ -3848,9 +3848,9 @@ function Wo_RegisterGroupMessage($ms_data = array()) {
 }
 function Wo_RegisterPageMessage($ms_data = array()) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($ms_data)) {
         return false;
     }
@@ -3919,9 +3919,9 @@ function Wo_RegisterPageMessage($ms_data = array()) {
 }
 function Wo_CreateUserChat($user_id = 0, $from_id = 0,$page_id = 0) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id)) {
         return false;
     }
@@ -3993,9 +3993,9 @@ function Wo_CreateUserChat($user_id = 0, $from_id = 0,$page_id = 0) {
 }
 function Wo_DeleteConversation($user_id = 0) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id) || !is_numeric($user_id) || $user_id < 0) {
         return false;
     }
@@ -4020,9 +4020,9 @@ function Wo_DeleteConversation($user_id = 0) {
 }
 function Wo_DeletePageConversation($user_id = 0,$page_id = 0) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id) || !is_numeric($user_id) || $user_id < 0 || empty($page_id) || !is_numeric($page_id) || $page_id < 0) {
         return false;
     }
@@ -4052,9 +4052,9 @@ function Wo_DeletePageConversation($user_id = 0,$page_id = 0) {
 }
 function Wo_DeleteGroupConversation($id = 0) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($id) || !is_numeric($id) || $id < 0) {
         return false;
     }
@@ -4128,9 +4128,9 @@ function Wo_DeleteMessage($message_id, $media = '', $deleter_id = 0) {
 }
 function Wo_CountMessages($data = array(), $type = '') {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($data['user_id']) or $data['user_id'] == 0) {
         $data['user_id'] = $wo['user']['user_id'];
     }
@@ -4198,9 +4198,9 @@ function Wo_SeenMessage($message_id) {
 }
 function Wo_GetMessageButton($user_id = 0) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (!is_numeric($user_id) or $user_id < 0) {
         return false;
     }
@@ -4780,9 +4780,9 @@ function Wo_DisplaySharedFile($media, $placement = '', $cache = false,$is_video 
 }
 function Wo_IsAdmin($user_id = 0) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $user_id = Wo_Secure($user_id);
     if (!empty($user_id) && $user_id > 0) {
         $query = mysqli_query($sqlConnect, "SELECT COUNT(`user_id`) as count FROM " . T_USERS . " WHERE admin = '1' AND user_id = {$user_id}");
@@ -4803,9 +4803,9 @@ function Wo_IsAdmin($user_id = 0) {
 }
 function Wo_IsModerator($user_id = '') {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $user_id = Wo_Secure($user_id);
     if (!empty($user_id) && $user_id > 0) {
         $query = mysqli_query($sqlConnect, "SELECT COUNT(`user_id`) as count FROM " . T_USERS . " WHERE admin = '2' AND user_id = {$user_id}");
@@ -4826,9 +4826,9 @@ function Wo_IsModerator($user_id = '') {
 }
 function Wo_CheckIfUserCanPost($num = 10) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $user_id = Wo_Secure($wo['user']['user_id']);
     if (empty($user_id) || !is_numeric($user_id) || $user_id < 1) {
         return false;
@@ -5599,9 +5599,9 @@ function Wo_IsPostOnwer($post_id, $user_id) {
 }
 function Wo_GetPostPublisherBox($user_id = 0, $recipient_id = 0) {
     global $wo;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $continue = true;
     if (empty($user_id) or $user_id == 0) {
         $user_id = $wo['user']['user_id'];
@@ -5986,9 +5986,9 @@ function Wo_DeletePost($post_id = 0,$type = '') {
     if ($post_id < 1 || empty($post_id) || !is_numeric($post_id)) {
         return false;
     }
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $user_id = Wo_Secure($wo['user']['user_id']);
     $post_id = Wo_Secure($post_id);
     $query   = mysqli_query($sqlConnect, "SELECT `id`, `user_id`, `recipient_id`, `page_id`, `postFile`, `postType`, `postText`, `postLinkImage`, `multi_image`, `album_name`,`parent_id`,`blog_id`,`job_id`,`postRecord` FROM " . T_POSTS . " WHERE `id` = {$post_id} AND (`user_id` = {$user_id} OR `recipient_id` = {$user_id} OR `page_id` IN (SELECT `page_id` FROM " . T_PAGES . " WHERE `user_id` = {$user_id}) OR `group_id` IN (SELECT `id` FROM " . T_GROUPS . " WHERE `user_id` = {$user_id}) OR `page_id` IN (SELECT `page_id` FROM " . T_PAGE_ADMINS . " WHERE `user_id` = {$user_id}))");
@@ -6225,9 +6225,9 @@ function Wo_DeleteGame($game_id) {
     if ($game_id < 1 || empty($game_id) || !is_numeric($game_id)) {
         return false;
     }
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $user_id = Wo_Secure($wo['user']['user_id']);
     if (Wo_IsAdmin($user_id) === false) {
         return false;
@@ -6246,9 +6246,9 @@ function Wo_DeleteGift($gift_id) {
     if ($gift_id < 1 || empty($gift_id) || !is_numeric($gift_id)) {
         return false;
     }
-     // if ($wo['loggedin'] == false) { //  TODO MODIFIED BY ME
-    //     return false; //  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+     // if ($wo['loggedin'] == false) { //  TODO. MODIFIED BY ME
+    //     return false; //  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $user_id = Wo_Secure($wo['user']['user_id']);
     if (Wo_IsAdmin($user_id) === false) {
         return false;
@@ -6268,9 +6268,9 @@ function Wo_DeleteSticker($sticker_id) {
     if ($sticker_id < 1 || empty($sticker_id) || !is_numeric($sticker_id)) {
         return false;
     }
-     // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+     // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $user_id = Wo_Secure($wo['user']['user_id']);
     if (Wo_IsAdmin($user_id) === false) {
         return false;
@@ -6331,9 +6331,9 @@ function Wo_GetPinnedPost($user_id, $type = '') {
 }
 function Wo_IsPostPinned($post_id) {
     global $sqlConnect, $wo;
-     // if ($wo['loggedin'] == false) { //  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+     // if ($wo['loggedin'] == false) { //  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($post_id) || !is_numeric($post_id) || $post_id < 1) {
         return false;
     }
@@ -6348,9 +6348,9 @@ function Wo_IsPostPinned($post_id) {
 }
 function Wo_IsUserPinned($id, $type = '') {
     global $sqlConnect, $wo;
-     // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+     // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $id         = Wo_Secure($id);
     $query_type = 'user_id';
     if ($type == 'page') {
@@ -6372,9 +6372,9 @@ function Wo_IsUserPinned($id, $type = '') {
 }
 function Wo_PinPost($post_id = 0, $type = '', $id = 0) {
     global $sqlConnect, $wo;
-     // if ($wo['loggedin'] == false) { //  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+     // if ($wo['loggedin'] == false) { //  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $user_id  = Wo_Secure($wo['user']['user_id']);
     $post_id  = Wo_Secure($post_id);
     $continue = false;
@@ -6439,9 +6439,9 @@ function Wo_PinPost($post_id = 0, $type = '', $id = 0) {
 }
 function Wo_BoostPost($post_id) {
     global $sqlConnect, $wo;
-     // if ($wo['loggedin'] == false) { //  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+     // if ($wo['loggedin'] == false) { //  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if ($wo['config']['pro'] == 0) {
         return false;
     }
@@ -6501,9 +6501,9 @@ function Wo_BoostPost($post_id) {
 }
 function Wo_IsPostBoosted($post_id) {
     global $sqlConnect, $wo;
-     // if ($wo['loggedin'] == false) { //  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+     // if ($wo['loggedin'] == false) { //  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($post_id) || !is_numeric($post_id) || $post_id < 1) {
         return false;
     }
@@ -6518,9 +6518,9 @@ function Wo_IsPostBoosted($post_id) {
 }
 function Wo_RegisterActivity($data = array()) {
     global $sqlConnect, $wo;
-     // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+     // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if ($wo['user']['show_activities_privacy'] == 0) {
         return false;
     }
@@ -6589,17 +6589,17 @@ function Wo_RegisterActivity($data = array()) {
 }
 function Wo_IsActivity($post_id, $comment_id, $replay_id, $follow_id,  $user_id, $activity_type) {
     global $sqlConnect, $wo;
-     // if ($wo['loggedin'] == false) { //  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+     // if ($wo['loggedin'] == false) { //  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $query = mysqli_query($sqlConnect, "SELECT `id` FROM " . T_ACTIVITIES . " WHERE `user_id` = '{$user_id}' AND ( `post_id` = '{$post_id}' OR `comment_id` = '{$comment_id}' OR `reply_id` = '{$replay_id}' OR `follow_id` = '{$follow_id}' ) AND `activity_type` = '{$activity_type}'");
     return (mysqli_num_rows($query) > 0) ? true : false;
 }
 function Wo_DeleteSelectedActivity($user_id, $activity_type, $follow_id) {
     global $sqlConnect, $wo;
-     // if ($wo['loggedin'] == false) { //  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+     // if ($wo['loggedin'] == false) { //  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($follow_id) || !is_numeric($follow_id) || $follow_id < 1) {
         return false;
     }
@@ -6611,9 +6611,9 @@ function Wo_DeleteSelectedActivity($user_id, $activity_type, $follow_id) {
 }
 function Wo_DeleteActivity($post_id, $user_id, $activity_type) {
     global $sqlConnect, $wo;
-     // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+     // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($post_id) || !is_numeric($post_id) || $post_id < 1) {
         return false;
     }
@@ -6625,9 +6625,9 @@ function Wo_DeleteActivity($post_id, $user_id, $activity_type) {
 }
 function Wo_GetActivity($id) {
     global $sqlConnect, $wo;
-     // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+     // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $user_id = Wo_Secure($wo['user']['user_id']);
     if (empty($id) || !is_numeric($id) || $id < 1) {
         return false;
@@ -6644,9 +6644,9 @@ function Wo_GetActivity($id) {
 }
 function Wo_GetActivities($data = array('after_activity_id' => 0, 'before_activity_id' => 0, 'limit' => 5, 'me' => false)) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $user_id = Wo_Secure($wo['user']['user_id']);
     $get     = array();
     if (empty($data['limit'])) {
@@ -6682,9 +6682,9 @@ function Wo_GetActivities($data = array('after_activity_id' => 0, 'before_activi
 }
 function Wo_DeleteReactions($post_id) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($post_id) || !is_numeric($post_id) || $post_id < 1) {
         return false;
     }
@@ -6699,9 +6699,9 @@ function Wo_DeleteReactions($post_id) {
 }
 function Wo_DeleteCommentReactions($comment_id) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($comment_id) || !is_numeric($comment_id) || $comment_id < 1) {
         return false;
     }
@@ -6715,9 +6715,9 @@ function Wo_DeleteCommentReactions($comment_id) {
 }
 function Wo_DeleteReplayReactions($replay_id) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($replay_id) || !is_numeric($replay_id) || $replay_id < 1) {
         return false;
     }
@@ -6731,9 +6731,9 @@ function Wo_DeleteReplayReactions($replay_id) {
 }
 function Wo_AddReactions($post_id, $reaction) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($post_id) || empty($reaction) || !is_numeric($post_id) || $post_id < 1) {
         return false;
     }
@@ -6787,9 +6787,9 @@ function Wo_AddReactions($post_id, $reaction) {
 }
 function Wo_AddReplayReactions($user_id,$reply_id, $reaction) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($reply_id) || empty($reaction) || !is_numeric($reply_id) || $reply_id < 1) {
         return false;
     }
@@ -6845,9 +6845,9 @@ function Wo_AddReplayReactions($user_id,$reply_id, $reaction) {
 }
 function Wo_AddCommentReactions($comment_id, $reaction) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($comment_id) || empty($reaction) || !is_numeric($comment_id) || $comment_id < 1) {
         return false;
     }
@@ -7198,9 +7198,9 @@ function Wo_GetPostReactionsTypes($object_id, $col = "post") {
 
 function Wo_AddLikes($post_id) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($post_id) || !is_numeric($post_id) || $post_id < 1) {
         return false;
     }
@@ -7353,9 +7353,9 @@ function Wo_IsCommented($post_id, $user_id) {
 }
 function Wo_AddWonders($post_id) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (!isset($post_id) or empty($post_id) or !is_numeric($post_id) or $post_id < 1) {
         return false;
     }
@@ -7943,9 +7943,9 @@ function Wo_RegisterPostComment($data = array()) {
 
 function Wo_GetGroupsListAPP($fetch_array = array()) {
     global $sqlConnect, $wo;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $user    = Wo_Secure($wo['user']['id']);
     $data    = array();
     $offset_query = "";
@@ -8005,9 +8005,9 @@ function Wo_GetPostCommentsSort($post_id = 0, $limit = 5,$type = 'latest') {
     if (empty($post_id) || !is_numeric($post_id) || $post_id < 0) {
         return false;
     }
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $logged_user_id = Wo_Secure($wo['user']['user_id']);
     $post_id        = Wo_Secure($post_id);
     $data           = array();
@@ -8050,9 +8050,9 @@ function Wo_GetPostCommentsLimited($post_id = 0, $comment_id = 0) {
     if (empty($post_id) || !is_numeric($post_id) || $post_id < 0) {
         return false;
     }
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $logged_user_id = Wo_Secure($wo['user']['user_id']);
     $post_id        = Wo_Secure($post_id);
     $data           = array();
@@ -8073,9 +8073,9 @@ function Wo_GetPostComments($post_id = 0, $limit = 5, $offset = 0) {
     if (empty($post_id) || !is_numeric($post_id) || $post_id < 0) {
         return false;
     }
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $offset_query = "";
     if (!empty($offset)) {
         $offset_query = " AND `id` > ".$offset;
@@ -8106,9 +8106,9 @@ function Wo_GetPostCommentsAPI($post_id = 0, $limit = 5, $offset = 0) {
     if (empty($post_id) || !is_numeric($post_id) || $post_id < 0) {
         return false;
     }
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $offset_query = "";
     if (!empty($offset)) {
         $offset_query = " AND `id` > ".$offset;
@@ -8134,9 +8134,9 @@ function Wo_GetCommentRepliesAPI($comment_id = 0, $limit = 5, $order_by = 'ASC',
     if (empty($comment_id) || !is_numeric($comment_id) || $comment_id < 0) {
         return false;
     }
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $offset_query = "";
     if (!empty($offset)) {
         $offset_query = " AND `id` > ".$offset;
@@ -8234,9 +8234,9 @@ function Wo_DeletePostComment($comment_id = '') {
     if ($comment_id < 0 || empty($comment_id) || !is_numeric($comment_id)) {
         return false;
     }
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $logged_user_id = Wo_Secure($wo['user']['user_id']);
     $post_id        = Wo_GetPostIdFromCommentId($comment_id);
     $query_one      = mysqli_query($sqlConnect, "SELECT `id`, `user_id`, `c_file` FROM " . T_COMMENTS . " WHERE `id` = {$comment_id} AND `user_id` = {$logged_user_id}");
@@ -8278,9 +8278,9 @@ function Wo_DeletePostReplyComment($comment_id = '') {
     if ($comment_id < 0 || empty($comment_id) || !is_numeric($comment_id)) {
         return false;
     }
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $logged_user_id = Wo_Secure($wo['user']['user_id']);
     $query_one      = mysqli_query($sqlConnect, "SELECT `id`, `user_id`,`c_file` FROM " . T_COMMENTS_REPLIES . " WHERE `id` = {$comment_id} AND `user_id` = {$logged_user_id}");
     if (mysqli_num_rows($query_one) > 0 || Wo_IsAdmin()) {
@@ -8308,9 +8308,9 @@ function Wo_UpdateComment($data = array()) {
     if (empty($data['text'])) {
         return false;
     }
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     $page_id = 0;
     if (!empty($data['page_id'])) {
         $page_id = Wo_Secure($data['page_id']);
@@ -8396,9 +8396,9 @@ function Wo_UpdateComment($data = array()) {
 }
 function Wo_UpdatePostPrivacy($data = array()) {
     global $wo, $sqlConnect, $cache;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if ($data['post_id'] < 0 || empty($data['post_id']) || !is_numeric($data['post_id'])) {
         return false;
     }
@@ -8421,9 +8421,9 @@ function Wo_UpdatePostPrivacy($data = array()) {
 }
 function Wo_UpdatePost($data = array()) {
     global $wo, $sqlConnect, $cache;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if ($data['post_id'] < 0 || empty($data['post_id']) || !is_numeric($data['post_id'])) {
         return false;
     }
@@ -8538,9 +8538,9 @@ function Wo_SavePosts($post_data = array()) {
 }
 function Wo_GetChatColor($user_id = 0, $conversation_user_id = 0,$page_id = 0) {
     global $sqlConnect, $wo;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id) || empty($conversation_user_id)) {
         return false;
     }
@@ -8568,9 +8568,9 @@ function Wo_GetChatColor($user_id = 0, $conversation_user_id = 0,$page_id = 0) {
 }
 function Wo_UpdateChatColor($user_id = 0, $conversation_user_id = 0, $color = '',$page_id = 0) {
     global $sqlConnect, $wo;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($user_id) || empty($conversation_user_id)) {
         return false;
     }
@@ -8619,9 +8619,9 @@ function Wo_UpdateChatColor($user_id = 0, $conversation_user_id = 0, $color = ''
 
 function Wo_ProfileCompletion(){
     global $sqlConnect, $wo;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
 
     $data = array(
         1 => 0,
@@ -8656,9 +8656,9 @@ function Wo_ProfileCompletion(){
 
 function Wo_GetLastAttachments($user_id) {
     global $wo, $sqlConnect;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (!is_numeric($user_id) or $user_id < 1) {
         return false;
     }
@@ -8740,9 +8740,9 @@ function Wo_GetMessagesPagesAPP($fetch_array = array()) {
 
 function Wo_AddCommentBlogReactions($comment_id, $reaction) {
     global $wo, $sqlConnect,$db;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($comment_id) || empty($reaction) || !is_numeric($comment_id) || $comment_id < 1) {
         return false;
     }
@@ -8809,9 +8809,9 @@ function Wo_AddCommentBlogReactions($comment_id, $reaction) {
 
 function Wo_AddBlogReplyReactions($user_id,$reply_id, $reaction) {
     global $wo, $sqlConnect,$db;
-    // if ($wo['loggedin'] == false) {//  TODO MODIFIED BY ME
-    //     return false;//  TODO MODIFIED BY ME
-    // }//  TODO MODIFIED BY ME
+    // if ($wo['loggedin'] == false) {//  TODO. MODIFIED BY ME
+    //     return false;//  TODO. MODIFIED BY ME
+    // }//  TODO. MODIFIED BY ME
     if (empty($reply_id) || empty($reaction) || !is_numeric($reply_id) || $reply_id < 1) {
         return false;
     }

@@ -984,7 +984,7 @@ else{
             break;
     }
 }
-//  TODO MODIFIED BY ME  FROM HERE
+//  TODO. MODIFIED BY ME  FROM HERE
 // switch ($page) {
 //     case 'home':
 //         include('sources/home.php');
@@ -1304,7 +1304,7 @@ else{
 //     case 'memories':
 //         include('sources/memories.php');
 //         break;
-// }   //  TODO MODIFIED BY ME TILL HERE PART 2
+// }   //  TODO.. MODIFIED BY ME TILL HERE PART 2
 
 if (empty($wo['content'])) {
     include('sources/404.php');

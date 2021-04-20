@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-md-2 leftcol"><?php echo Wo_LoadPage("sidebar/left-sidebar"); ?></div>
 		<div class="col-md-7 middlecol">
-			<?php if ( $wo['loggedin'] == false) { ?> <!---TODO Modified By ME -->
+			<?php if ( $wo['loggedin'] == false) { ?> <!---TODO. Modified By ME -->
 				<div class="wow_content user-status-home wow_home_stories">
 					<div class="wo_page_hdng pag_neg_padd">
 						<div class="wo_page_hdng_innr">
@@ -11,7 +11,7 @@
 								<div class="view-more-stories"><a href="<?php echo Wo_SeoLink('index.php?link1=more-status'); ?>"><?php echo $wo['lang']['see_all'] ?></a></div>
 							<?php } ?>
 						</div>
-					</div>	<?php if ($wo['config']['user_status'] == 1 && $wo['loggedin'] == true) { ?> <!---TODO Modified By ME -->
+					</div>	<?php if ($wo['config']['user_status'] == 1 && $wo['loggedin'] == true) { ?> <!---TODO. Modified By ME -->
 					<ul class="status-list">
 						<li class="create_new">
 							<a href="<?php echo Wo_SeoLink('index.php?link1=create-status'); ?>" data-ajax="?link1=create-status">
@@ -32,7 +32,7 @@
 						?>
 						<?php } ?>
 					</ul>
-				</div><?php } ?> <!---TODO Modified By ME -->
+				</div><?php } ?> <!---TODO. Modified By ME -->
 			<?php 
 				}
 				if (Wo_IsThereAnnouncement() === true) { 
@@ -77,7 +77,7 @@
 			</div>
 			<?php } ?>
 		
-			<?php if ($wo['page'] == 'home' && $wo['loggedin'] == true) { ?> <!---TODO Modified By ME -->
+			<?php if ($wo['page'] == 'home' && $wo['loggedin'] == true) { ?> <!---TODO. Modified By ME -->
 				<div id="scroll_filter_click"></div>
 				<ul class="list-group filterby" id="filterby-post">
 					<li class="list-group-item hidden" contenteditable="false">Filter by</li>
@@ -105,7 +105,7 @@
 					<li class="list-group-item filter-by-li" onclick="Wo_FilterPostBy('maps');" dir="auto" style="color: #c12056;">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0L12 23.728zm4.95-7.778a7 7 0 1 0-9.9 0L12 20.9l4.95-4.95zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="currentColor"/></svg>
 					</li>
-					<?php } ?> <!---TODO Modified By ME -->
+					<?php } ?> <!---TODO. Modified By ME -->
 				</ul>
 			<?php } ?>
 		

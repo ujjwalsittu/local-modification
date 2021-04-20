@@ -9,7 +9,7 @@
 // | Copyright (c) 2017 WoWonder. All rights reserved.
 // +------------------------------------------------------------------------+
 require_once('assets/init.php');
-//  TODO MODIFIED BY ME FROM HERE PART 1
+//  TODO. MODIFIED BY ME FROM HERE PART 1
 if ($wo['loggedin'] == true) {
     $update_last_seen = Wo_LastSeen($wo['user']['user_id']);
 } else if (!empty($_SERVER['HTTP_HOST'])) {
@@ -30,7 +30,7 @@ if ($wo['loggedin'] == true) {
     //         }
     //     }
     // }
-}   //  TODO MODIFIED BY ME TILL HERE PART 2
+}   //  TODO. MODIFIED BY ME TILL HERE PART 2
 if (!empty($_GET)) {
     foreach ($_GET as $key => $value) {
         $value = preg_replace('/on[^<>=]+=[^<>]*/m', '', $value);
